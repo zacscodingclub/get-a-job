@@ -13,7 +13,7 @@
                 .state('home.jobs', {
                     url: 'jobs',
                     templateUrl: 'jobs/jobs.html',
-                    controller: 'TweetsController as vm'
+                    controller: 'JobsController as vm'
                 });
 
             $urlRouterProvider.otherwise('/');
