@@ -1,6 +1,12 @@
 # Get a Job - README
 
-
+## To Do
+1. Fix form submit:
+  * Refresh list
+  * Clear form
+2. Job#show
+3. Job#update
+4. Job#destroy
 
 
 <hr>
