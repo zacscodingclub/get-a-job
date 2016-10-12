@@ -1,0 +1,5 @@
+<div ng-include="'jobs/new.html'"></div>
+
+<ul>
+  <li ng-repeat="job in vm.jobs" track by job.id>{{ job.title }}</li>
+</ul>

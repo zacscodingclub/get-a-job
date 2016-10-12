@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    function JobsController() {
+    function JobsController(JobFactory) {
         var vm = this;
-        
+
         // callable methods on VM
         vm.createJob = createJob;
         vm.updateJob = updateJob;
@@ -20,11 +20,13 @@
         }
 
         function getJobs() {
-
+            return JobFactory.getJobs()
+                                .then(setJobs);
         }
 
         function createJob() {
-
+            return JobFactory.createJob(vm.newJob)
+                                .then(getJobs());
         }
 
         function updateJob() {
@@ -37,6 +39,10 @@
 
         function getJob() {
 
+        }
+
+        function setJobs(data) {
+            return vm.jobs = data;
         }
     }
 

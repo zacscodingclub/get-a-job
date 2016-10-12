@@ -1,0 +1,13 @@
+<h3>Add a Job</h3>
+
+<form ng-submit="vm.createJob()">
+  <label for="title">Title: </label>
+  <input type="text" ng-model="vm.newJob.title"><br>
+  <label for="company">Company: </label>
+  <input type="text" ng-model="vm.newJob.company"><br>
+  <label for="company_url">Website: </label>
+  <input type="text" ng-model="vm.newJob.company_url"><br>
+  <label for="apply_date">Title: </label>
+  <input type="date" ng-model="vm.newJob.apply_date"><br>
+  <input type="submit" value="Add Job">
+</form>
