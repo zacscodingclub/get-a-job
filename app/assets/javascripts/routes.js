@@ -14,6 +14,11 @@
                     url: 'jobs',
                     templateUrl: 'jobs/jobs.html',
                     controller: 'JobsController as vm'
+                })
+                .state('home.jobs.job', {
+                    url: '/:jobId',
+                    templateUrl: 'jobs/job.html',
+                    controller: 'JobController as vm'
                 });
 
             $urlRouterProvider.otherwise('/');

@@ -6,9 +6,7 @@
 
         // callable methods on VM
         vm.createJob = createJob;
-        vm.updateJob = updateJob;
-        vm.deleteJob = deleteJob;
-        vm.getJob = getJob;
+        vm.getJobs = getJobs;
 
         // init methods
         activate();
@@ -26,19 +24,12 @@
 
         function createJob() {
             return JobFactory.createJob(vm.newJob)
-                                .then(getJobs());
+                                .then(addToJobs(vm.newJob))
+                                .then(vm.newJob = {});
         }
 
-        function updateJob() {
-
-        }
-
-        function deleteJob() {
-
-        }
-
-        function getJob() {
-
+        function addToJobs(newJob) {
+            return vm.jobs.push(newJob);
         }
 
         function setJobs(data) {
